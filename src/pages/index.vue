@@ -1,20 +1,8 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
+import MaisonCard from '@/components/MaisonCard.vue';
+import type { MaisonRecord } from '@/types'
 
-interface MaisonRecord {
-    adresse: string;
-    collectionId: string;
-    collectionName: string;
-    created: string;
-    favori: boolean;
-    id: string;
-    images: string[];
-    nbChambres: number;
-    nbSdb: number;
-    nomMaison: string;
-    prix: number;
-    surface: number;
-    updated: string;
-}
 
 const maisonsListe: MaisonRecord[] =
 [
@@ -121,5 +109,12 @@ console.log(maisonsListe);
 </script>
 
 <template>
-  <h1 class="text-2xl">Bonjour monde !</h1>
+  <div>
+
+<MaisonCard v-for="uneMaison in maisonsListe" :key="uneMaison.nom" v-bind="uneMaison" />
+
+    <h1 class="text-2xl">Bonjour monde !</h1>
+
+    
+  </div>
 </template>
