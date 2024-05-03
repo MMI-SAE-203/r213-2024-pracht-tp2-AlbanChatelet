@@ -22,3 +22,4 @@ const src = pb.getFileUrl(props.record, props.filename, {
 <template>
   <img :src="src" :width="width" :height="height" />
 </template>
+
