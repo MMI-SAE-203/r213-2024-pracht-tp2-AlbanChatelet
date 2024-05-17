@@ -18,7 +18,7 @@ const maisonsListe: MaisonRecord[] =
       
     "nbChambres": 3,
     "nbSdb": 1,
-    "nomMaison": "Maison 1 étage à vendre\r\n",
+    "nomMaison": "Maison simple\r\n",
     "prix": 115000,
     "surface": 180,
     "updated": "2024-04-11 14:14:13.779Z"
@@ -102,7 +102,7 @@ console.log(maisonsListe);
 </script>
 
 <template>
-  <div>
+  <div class="p-8 grid grid-cols-1 gap-7 md:grid-cols-3">
 
 <MaisonCard v-for="uneMaison in maisonsListe" :key="uneMaison.id" v-bind="uneMaison" />
 
