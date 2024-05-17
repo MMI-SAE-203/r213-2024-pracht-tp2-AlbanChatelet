@@ -7,7 +7,7 @@ export interface MaisonRecord {
   created: string
   favori: boolean
   id: string
-  image: string[]
+  image: string
   nbChambres: number
   nbSdb: number
   nomMaison: string
